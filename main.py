@@ -13,7 +13,6 @@ from pattern_recognize import pattern
 if __name__ == "__main__":
     
     src = sys.argv[1]
-
     # src = "C:\\ai_closet_demo\\image\\polo.jpeg"
     
     # print("색분류")

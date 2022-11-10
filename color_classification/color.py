@@ -7,7 +7,7 @@ from lab_converter import ColorConverter
 
 
 def execute(img_path, q):
-    converter = ColorConverter('C:\\ai_closet_demo\\color_classification\\final_color_list.txt')
+    converter = ColorConverter('C:\\ai_closet_demo\\color_classification\\final_color_list_demo.txt')
     # 이미지 로드
     image = cv2.imread(img_path)  # test image
 
@@ -90,7 +90,9 @@ def execute(img_path, q):
 
     # 색상의 평균값 출력
     # 0.6(=baseline) 이상 차지하는 색상이 있으면 그 색상 하나만 리턴
-    rgb_tuple_list = get_dominent_rgb(0.6)
+    # --> 0.4로 변경
+    # rgb_tuple_list = get_dominent_rgb(0.6)
+    rgb_tuple_list = get_dominent_rgb(0.7)
 
     rgb, w1 = rgb_tuple_list[0]
     color_name1 = converter.rgb_to_name(rgb)
